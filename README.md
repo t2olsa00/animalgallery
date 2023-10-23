@@ -3,9 +3,9 @@
 
 Pages: gallery.html, contact.html, other.html
 
-https://t2olsa00.github.io/animalgallery/gallery.html
-https://t2olsa00.github.io/animalgallery/contact.html
-https://t2olsa00.github.io/animalgallery/other.html
+[Gallery](gallery.html) <br>
+[Contact](contact.html) <br>
+[Other](other.html) <br>
 
 **Help for grading the assignment:**
 
