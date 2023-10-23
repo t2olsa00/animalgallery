@@ -1,0 +1,32 @@
+/*Makes navbar look better*/
+ul li {
+    display: inline-block;
+    padding: 5px;
+    
+}
+
+/*Makes navbar look better*/
+ul {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/*Body flex and alignment*/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/*Centers all H1s*/
+h1 {
+  text-align: center;
+}
+
+/*Site background color*/
+html {
+  background-color: rgb(190, 241, 224);
+}

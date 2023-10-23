@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/contactstyle.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div> 
+        <ul>
+        <li><a href="gallery.html">Gallery</a></li>               
+        <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    
+
+    <h1>Contact us</h1>
+    <form onSubmit="return confirm('Do you want to submit?') ">
+        <textarea name="send" cols="30" rows="10" placeholder="Leave your thoughts here..."></textarea>
+        <label for="email">Enter your email and/or leave a relevant file (optional)</label>
+        <div class="details">
+        <input type="text" id="email" placeholder="something@email.com">
+        <input type="file" id="myFile" name="filename">
+        </div> 
+        <button type="submit" id="submitForm">Submit</button>
+
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+/*Gallery display options*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+/*Image options*/
+.gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/*Lightbox styles*/
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+/*Makes opened image fit better*/
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+}

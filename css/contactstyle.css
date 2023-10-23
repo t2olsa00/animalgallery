@@ -1,0 +1,35 @@
+/*Form placement and size*/
+form {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+/*Options for form elements*/
+form label, form textarea, form input, form button {
+    display: block;
+    margin: 10px 0;
+}
+
+/*Textbox element options*/
+form textarea {
+background-color: rgb(238, 240, 243);
+width: 100%;
+}
+
+/*Email box and file upload button settings*/
+.details {
+    display: flex;
+    gap: 10%;
+}
+
+/*Submit button settings*/
+#submitForm {
+    width: 100%;
+    margin: 0 auto;
+}

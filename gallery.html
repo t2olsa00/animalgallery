@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/gallerystyle.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div id="navbar"></div>
+    
+    <div> 
+        <ul>
+        <li><a href="gallery.html">Gallery</a></li>               
+        <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    
+
+    <h1>Gallery</h1> 
+    
+    <button onclick="myAlert()">Press here for a haiku</button>
+
+    <script>
+    function myAlert() {
+      alert("This road!\nNo one is going my Way\nThis autumn evening");
+    }
+    </script>
+        <p>Welcome to the gallery! The pictures are interactive so you can click to open them and click anywhere to close.</p>
+
+    <div class="gallery">
+        <img src="https://cdn.pixabay.com/photo/2014/10/07/18/36/possum-478162_960_720.jpg" alt="Opossum in hand" onclick="openLightbox('https://cdn.pixabay.com/photo/2014/10/07/18/36/possum-478162_960_720.jpg', 'Image 1')">
+        <img src="https://cdn.pixabay.com/photo/2013/09/19/16/22/possum-183851_960_720.jpg" alt="Opossum walking on grass" onclick="openLightbox('https://cdn.pixabay.com/photo/2013/09/19/16/22/possum-183851_960_720.jpg', 'Image 2')">
+        <img src="https://cdn.pixabay.com/photo/2018/12/07/04/20/opossum-3861107_960_720.jpg" alt="Opossum on a gravel road" onclick="openLightbox('https://cdn.pixabay.com/photo/2018/12/07/04/20/opossum-3861107_960_720.jpg', 'Image 3')">
+        <img src="https://cdn.pixabay.com/photo/2014/04/03/05/32/opossum-309264_960_720.jpg" alt="Opossum with its mouth open in a bird's nest" onclick="openLightbox('https://cdn.pixabay.com/photo/2014/04/03/05/32/opossum-309264_960_720.jpg', 'Image 4')">
+        <img src="https://cdn.pixabay.com/photo/2022/02/21/01/21/opossum-7025591_960_720.jpg" alt="Opossum walking on grass with snow in the background" onclick="openLightbox('https://cdn.pixabay.com/photo/2022/02/21/01/21/opossum-7025591_960_720.jpg', 'Image 5')">
+        <img src="https://cdn.pixabay.com/photo/2023/06/01/19/01/animal-8034147_960_720.jpg" alt="Opossum walking on grass in the dark" onclick="openLightbox('https://cdn.pixabay.com/photo/2023/06/01/19/01/animal-8034147_960_720.jpg', 'Image 6')">
+        <img src="https://cdn.pixabay.com/photo/2022/07/15/15/17/night-7323377_960_720.jpg" alt="Opossum hiding behind a rock" onclick="openLightbox('https://cdn.pixabay.com/photo/2022/07/15/15/17/night-7323377_960_720.jpg', 'Image 7')">
+    </div>
+
+    <!-- Lightbox container -->
+    <div class="lightbox" id="lightbox">
+        <span onclick="closeLightbox()" class="close"></span>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    <script>
+        // JavaScript functions to open and close the lightbox
+        function openLightbox(imageSrc, altText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = altText;
+            lightbox.style.display = 'block';
+
+            lightbox.onclick = function() {
+                lightbox.style.display = 'none';
+            };
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
