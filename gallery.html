@@ -10,11 +10,12 @@
 </head>
 <body>
     <div id="navbar"></div>
-    
+    <!-- Navbar -->
     <div> 
         <ul>
-        <li><a href="gallery.html">Gallery</a></li>               
-        <li><a href="contact.html">Contact us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>               
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="other.html">Other</a></li>
         </ul>
     </div>
     
@@ -28,7 +29,7 @@
       alert("This road!\nNo one is going my Way\nThis autumn evening");
     }
     </script>
-        <p>Welcome to the gallery! The pictures are interactive so you can click to open them and click anywhere to close.</p>
+        <p>Welcome to the gallery! The pictures are interactive so you can click to open them and click anywhere to close. Also royalty free.</p>
 
     <div class="gallery">
         <img src="https://cdn.pixabay.com/photo/2014/10/07/18/36/possum-478162_960_720.jpg" alt="Opossum in hand" onclick="openLightbox('https://cdn.pixabay.com/photo/2014/10/07/18/36/possum-478162_960_720.jpg', 'Image 1')">
@@ -47,7 +48,7 @@
     </div>
 
     <script>
-        // JavaScript functions to open and close the lightbox
+        //Opening and closing lightbox
         function openLightbox(imageSrc, altText) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = document.getElementById('lightbox-image');

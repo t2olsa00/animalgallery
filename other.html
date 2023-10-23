@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Other</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <!-- Navbar -->
+    <div> 
+        <ul>
+        <li><a href="gallery.html">Gallery</a></li>               
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="other.html">Other</a></li>
+        </ul>
+    </div>
+
+    <h1>Testing site</h1>
+    <p>Here I will implement some of the tasks on the assignment since I felt they didn't fit with the gallery theme</p>
+
+    <div class="fetchBtns">
+    <button onclick="myVar = setTimeout(myFunction, 3000)">Fetch data</button>
+    <button onclick="clearData()">Clear Data</button>
+    </div>
+    <div id="result">Fetch data is written here 3 seconds after the button above is pressed</div>
+    
+    <script>
+        function myFunction() {
+            //The URL we fetch the data from
+            const apiUrl = "https://jsonplaceholder.typicode.com/posts/99";
+    
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json(); //Parses the API response as JSON
+                })
+                .then(data => {
+                    //Formats JSON data to look better
+                    const keyValuePairs = Object.entries(data);
+                    const formattedData = keyValuePairs.map(([key, value]) => `${key}: ${value}`).join("<br>");
+                    document.getElementById("result").innerHTML = formattedData;
+                })
+                .catch(error => {
+                    //Error handling
+                    console.error('Fetch error:', error);
+                });
+        }
+    
+        function clearData() {
+            //Clear the content of the result element
+            document.getElementById("result").innerHTML = "Fetch data is written here when the button above is pressed";
+        }
+    </script>
+    
+</body>
+</html>

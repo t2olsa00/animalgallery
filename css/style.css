@@ -30,3 +30,12 @@ h1 {
 html {
   background-color: rgb(190, 241, 224);
 }
+
+#result {
+  background-color: white;
+}
+
+.fetchBtns {
+  display: flex;
+  gap: 20px;
+}
